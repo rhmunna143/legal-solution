@@ -16,12 +16,41 @@
         .font-garamond {
             font-family: 'EB Garamond', serif;
         }
+
+        .bg-ban-img {
+            background-image: url("./images/banner.png");
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
     </style>
+    <script>
+                    module.exports = {
+                                            theme: {
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/images/banner.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
+        }
+    }
+    }
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            back-color: '#B68C5A'
+          }
+        }
+      }
+    }
+    </script>
 </head>
 <body class="font-garamond">
     <header>
         <!-- navbar -->
-        <nav class="container mx-auto">
+        <nav class="max-w-6xl mx-auto">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown ">
@@ -112,13 +141,25 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn bg-[#B68C5A] text-white rounded-none">Free Consultation</a>
+                  <a class="btn bg-[#B68C5A] text-white rounded-lg">Free Consultation</a>
                 </div>
               </div>
         </nav>
 
         <!-- banner section -->
-        
+        <section class="max-w-6xl mx-auto">
+            <div class="hero bg-ban-img">
+                <div class="hero-content text-center text-white mt-32 mb-32">
+                  <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">We Provide Effective Legal Solutions</h1>
+                    <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+
+                    <input type="text" name="" id="" placeholder="Search your services" class="rounded-md w-3/5 h-12 text-center leading-6">
+                    <button class="btn bg-[#B68C5A] text-white border-none w-32 rounded-lg ml-4">Search</button>
+                  </div>
+                </div>
+              </div>
+        </section>
     </header>
 
     <main>
